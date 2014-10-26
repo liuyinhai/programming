@@ -35,6 +35,8 @@ public:
                  break;
              }
          }
+         if (s.size() >= 1 && s[s.size()-1] == ' ')
+              s = s.substr(0, s.size() - 1);
          return ; 
      }
 };
@@ -42,7 +44,7 @@ public:
 int main()
 {
     Solution solution;
-    string s =  " the  sky is blue ";
+    string s =  "a   ";
     cout<<s<<endl;
     solution.reverseWords(s);
     cout<<s<<endl;
